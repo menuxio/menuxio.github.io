@@ -1,5 +1,7 @@
-// modelo5.js
+// modelo5.js con espaciado lateral mejorado
 export function render(menu, container) {
+  container.className = "min-h-screen w-full bg-black text-white px-6 sm:px-8 md:px-12 py-6";
+
   container.innerHTML = `
     <h1 class="text-2xl font-bold mb-2" id="nombre">${menu.nombre}</h1>
     <p class="text-gray-500 mb-6" id="descripcion">${menu.descripcion}</p>
