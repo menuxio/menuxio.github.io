@@ -11,24 +11,22 @@ function render(menu, container) {
     </div>
   `;
 
-  const categorias = {};
-  menu.items.forEach(item => {
-    const cat = item.categoria || 'Otros';
-    if (!categorias[cat]) categorias[cat] = [];
-    categorias[cat].push(item);
-  });
-
   const secciones = container.querySelector("#menu-secciones");
   secciones.innerHTML = '';
 
-  for (const [nombreCategoria, items] of Object.entries(categorias)) {
+  const categorias = menu.categorias || [];
+
+  for (const categoria of categorias) {
+    const nombreCategoria = categoria.nombre;
+    const items = categoria.item || [];
+
     const div = document.createElement("div");
 
     const itemsHtml = items.map(item => `
       <li class="flex flex-col border-b border-gray-700 pb-2">
         <div class="flex justify-between">
           <span class="font-semibold">${item.nombre}</span>
-          <span class="text-yellow-300">${item.precio.toFixed(2)} €</span>
+          <span class="text-yellow-300">${item.precio.toFixed(2)} ${item.currency || '€'}</span>
         </div>
         <p class="text-xs text-gray-400">${item.descripcion || ''}</p>
       </li>
@@ -44,3 +42,7 @@ function render(menu, container) {
 }
 
 export { render };
+
+
+
+export const useLogo = false;

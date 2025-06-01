@@ -24,14 +24,12 @@ function render(menu, container) {
   const catTitle = container.querySelector("#cat-title");
   const catItems = container.querySelector("#cat-items");
 
-  const categorias = {};
-  menu.items.forEach(item => {
-    const cat = item.categoria || 'Otros';
-    if (!categorias[cat]) categorias[cat] = [];
-    categorias[cat].push(item);
-  });
+  const categorias = menu.categorias || [];
 
-  Object.entries(categorias).forEach(([cat, items]) => {
+  categorias.forEach(categoria => {
+    const cat = categoria.nombre;
+    const items = categoria.item || [];
+
     const btn = document.createElement("button");
     btn.className = "block w-full text-left py-3 px-4 border-b border-gray-700 text-yellow-300 hover:bg-gray-800 transition-colors uppercase font-bold tracking-wide";
     btn.textContent = cat;
@@ -47,7 +45,7 @@ function render(menu, container) {
       <div class="border-b border-gray-700 pb-2">
         <div class="flex justify-between items-center">
           <span class="font-medium text-white">${item.nombre}</span>
-          <span class="text-yellow-300 font-semibold">${item.precio.toFixed(2)} €</span>
+          <span class="text-yellow-300 font-semibold">${item.precio.toFixed(2)} ${item.currency || '€'}</span>
         </div>
         <p class="text-sm text-gray-400 mt-1">${item.descripcion || ''}</p>
       </div>
@@ -61,3 +59,7 @@ function render(menu, container) {
 }
 
 export { render };
+
+
+
+export const useLogo = false;

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menuxio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="theme-color" content="#0d0d0d" />
+</head>
+
+<body class="bg-[#0d0d0d] text-white">
+  <main class="min-h-screen px-4 py-8 max-w-5xl mx-auto space-y-12">
+    <header class="bg-[#111] border border-yellow-500 text-white rounded-xl py-10 text-center shadow-md">
+      <h1 class="text-3xl font-bold mb-2 text-yellow-400">Menuxio</h1>
+      <p class="text-lg text-gray-300">Cartas digitales modernas para tu restaurante</p>
+      <div class="mt-6">
+        <label for="modelo" class="block font-semibold mb-1 text-white">Explora una carta real:</label>
+        <select id="modelo" onchange="redirigirModelo(this.value)"
+          class="bg-white dark:bg-gray-800 text-black dark:text-white px-4 py-2 rounded border shadow-md">
+          <option value="">Selecciona un restaurante...</option>
+          <option value="shisha_lounge">Shisha Lounge</option>
+          <option value="dulce_tentación">Dulce Tentación</option>
+          <option value="área_ruta_66">Área Ruta 66</option>
+          <option value="carnívoro_grill">Carnívoro Grill</option>
+          <option value="vegan_paradise">Vegan Paradise</option>
+        </select>
+      </div>
+    </header>
+
+    <section class="text-center">
+      <h2 class="text-2xl font-semibold mb-4 text-yellow-400">¿Qué es Menuxio?</h2>
+      <p class="text-gray-300 max-w-2xl mx-auto">
+        Menuxio es una alternativa moderna y accesible a Smartmenu. Ofrecemos cartas digitales elegantes, rápidas y
+        adaptadas a móvil para restaurantes, cafeterías, bares y más.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-6 text-center text-yellow-400">Planes Menuxio</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-[#111] border border-yellow-500 rounded-lg p-4 shadow">
+          <h3 class="text-lg font-bold text-yellow-400 mb-2">Básico</h3>
+          <p class="text-sm italic mb-2 text-gray-400">Para locales pequeños</p>
+          <ul class="text-sm list-disc list-inside space-y-1 text-gray-200">
+            <li>Carta digital por QR</li>
+            <li>Hasta 1 modelo visual</li>
+            <li>Edición manual</li>
+          </ul>
+          <div class="mt-4">
+            <a href="/precios/" class="text-yellow-400 hover:underline text-sm">Ver más detalles</a>
+          </div>
+        </div>
+        <div class="bg-[#111] border border-yellow-500 rounded-lg p-4 shadow">
+          <h3 class="text-lg font-bold text-yellow-400 mb-2">Estándar</h3>
+          <p class="text-sm italic mb-2 text-gray-400">Versatilidad para todo tipo de negocios</p>
+          <ul class="text-sm list-disc list-inside space-y-1 text-gray-200">
+            <li>Todos los modelos visuales</li>
+            <li>Asistencia IA para edición</li>
+            <li>Imágenes y logos</li>
+          </ul>
+          <div class="mt-4">
+            <a href="/precios/" class="text-yellow-400 hover:underline text-sm">Ver más detalles</a>
+          </div>
+        </div>
+        <div class="bg-[#111] border border-yellow-500 rounded-lg p-4 shadow">
+          <h3 class="text-lg font-bold text-yellow-400 mb-2">Avanzado</h3>
+          <p class="text-sm italic mb-2 text-gray-400">Para destacar por completo</p>
+          <ul class="text-sm list-disc list-inside space-y-1 text-gray-200">
+            <li>Personalización total</li>
+            <li>Gestión vía panel IA</li>
+            <li>Dominio y hosting incluidos</li>
+          </ul>
+          <div class="mt-4">
+            <a href="/precios/" class="text-yellow-400 hover:underline text-sm">Ver más detalles</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-6">
+        <a href="/precios/"
+          class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 px-4 rounded transition">
+          Ver todos los precios y extras
+        </a>
+      </div>
+    </section>
+
+    <section id="contacto" class="text-center border-t border-slate-700 pt-10">
+      <h2 class="text-xl font-semibold mb-4 text-yellow-400">Contacto</h2>
+      <p class="text-gray-400 mb-2">¿Quieres tu carta en PDF o tienes dudas?</p>
+      <p class="mb-1">Escríbenos por WhatsApp al <strong class="text-yellow-400">722 85 32 02</strong></p>
+      <p>o envíanos un correo a <strong class="text-yellow-400">menuxio.app@gmail.com</strong></p>
+    </section>
+  </main>
+
+  <script>
+    function redirigirModelo(id) {
+      if (id) {
+        window.open(`/menus/viewer?restaurante_id=${id}`, '_blank');
+      }
+    }
+  </script>
+</body>
+
+</html>

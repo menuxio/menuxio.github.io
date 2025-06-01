@@ -1,7 +1,7 @@
 const SUPABASE_URL = 'https://xbakgvmjukfqkmisqtht.supabase.co';
-const SUPABASE_API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhiYWtndm1qdWtmcWttaXNxdGh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1NjQxODYsImV4cCI6MjA2NDE0MDE4Nn0.D_fIYb1bTBdulADUKxfB7syDm_KNXlz6AawhBban38o';
+const SUPABASE_API_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhiYWtndm1qdWtmcWttaXNxdGh0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg1NjQxODYsImV4cCI6MjA2NDE0MDE4Nn0.D_fIYb1bTBdulADUKxfB7syDm_KNXlz6AawhBban38o'; // tu clave
 
-// main.js
+
 const app = document.getElementById('app');
 const params = new URLSearchParams(window.location.search);
 const urlModelo = params.get('modelo');
@@ -13,7 +13,7 @@ if (!restauranteId) {
 }
 
 async function fetchMenu(id) {
-  const res = await fetch(`${SUPABASE_URL}/rest/v1/menus?restaurante_id=eq.${id}`, {
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/menus?restaurante_id=eq.${id}&select=*,categorias(*,item(*))`, {
     headers: {
       apikey: SUPABASE_API_KEY,
       Authorization: `Bearer ${SUPABASE_API_KEY}`
@@ -26,6 +26,7 @@ async function fetchMenu(id) {
 (async () => {
   try {
     const menu = await fetchMenu(restauranteId);
+
     if (!menu) {
       app.innerHTML = '<p class="text-red-500">Menú no encontrado.</p>';
       return;
@@ -33,6 +34,12 @@ async function fetchMenu(id) {
 
     const modeloFinal = menu.modelo === -1 ? (urlModelo || '1') : String(menu.modelo);
     const modulo = await import(`./modelo${modeloFinal}.js`);
+
+    // Si el modelo usa logo y hay un campo logo definido en el menú
+    if (modulo.useLogo && menu.logo) {
+      menu.logo = `${SUPABASE_URL}/storage/v1/object/public/logos//${menu.logo}`;
+    }
+
     modulo.render(menu, app);
 
   } catch (err) {
