@@ -1,118 +1,130 @@
 <!DOCTYPE html>
 <html lang="es" class="dark">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Planes y Precios | Menuxio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planes y Precios | Menuxio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-[#0d0d0d] text-white">
-  <main class="max-w-6xl mx-auto px-4 py-12 space-y-16">
+    <main class="max-w-6xl mx-auto px-4 py-12 space-y-16">
 
-    <header class="text-center border border-yellow-500 p-6 rounded-xl bg-[#111]">
-      <h1 class="text-2xl font-bold text-yellow-400 mb-2">Planes y Servicios</h1>
-      <p class="text-gray-300">Encuentra el plan perfecto para tu restaurante</p>
-    </header>
+        <header class="text-center border border-yellow-500 p-6 rounded-xl bg-[#111]">
+            <h1 class="text-2xl font-bold text-yellow-400 mb-2">Planes y Servicios</h1>
+            <p class="text-gray-300">Encuentra el plan perfecto para tu restaurante</p>
+        </header>
 
-    <section>
-      <h2 class="text-xl font-semibold text-center text-yellow-400 mb-8">Planes disponibles</h2>
-      <div class="grid md:grid-cols-3 gap-6">
+        <p class="text-center text-sm text-yellow-300 mb-6">
+            🎨 Todos los planes incluyen la posibilidad de personalizar el diseño visual (colores, tipografía, estilo).
+        </p>
 
-        <!-- Básico -->
-        <div class="bg-[#111] border border-yellow-500 rounded-lg p-5">
-          <h3 class="text-lg font-bold text-yellow-300 mb-2">Básico — 12€/mes</h3>
-          <p class="italic text-sm text-gray-400 mb-4">Ideal para negocios que solo necesitan una carta simple y profesional.</p>
-          <ul class="text-sm list-disc list-inside text-gray-200 space-y-1">
-            <li>1 carta digital personalizada</li>
-            <li>Subdominio tipo <code>tucarta.app/nombre</code></li>
-            <li>Diseño visual a elegir (modelo 1 a 8)</li>
-            <li>QR físico si estás en zona local</li>
-            <li>1 cambio manual gratuito al mes</li>
-            <li>Soporte por WhatsApp o correo</li>
-          </ul>
-        </div>
 
-        <!-- Profesional -->
-        <div class="bg-[#111] border border-yellow-500 rounded-lg p-5">
-          <h3 class="text-lg font-bold text-yellow-300 mb-2">Profesional — 25€/mes</h3>
-          <p class="italic text-sm text-gray-400 mb-4">Para quienes quieren destacar visualmente y tener más libertad.</p>
-          <ul class="text-sm list-disc list-inside text-gray-200 space-y-1">
-            <li>Todo lo del Plan Básico</li>
-            <li>Cambios ilimitados (manual o WhatsApp)</li>
-            <li>Logo visible y portada</li>
-            <li>Personalización de colores, fuentes y estilos</li>
-            <li>Varias cartas (comida, bebida...)</li>
-            <li>Estadísticas básicas de visitas</li>
-          </ul>
-        </div>
+        <section>
+            <h2 class="text-xl font-semibold text-center text-yellow-400 mb-8">Planes disponibles</h2>
+            <div class="grid md:grid-cols-3 gap-6">
 
-        <!-- Avanzado -->
-        <div class="bg-[#111] border border-yellow-500 rounded-lg p-5 relative opacity-50">
-          <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-yellow-300 rounded-lg z-10">
-            <span class="text-lg font-bold">Próximamente</span>
-          </div>
-          <h3 class="text-lg font-bold text-yellow-300 mb-2">Avanzado — 40€/mes</h3>
-          <p class="italic text-sm text-gray-400 mb-4">Para locales con necesidades avanzadas o múltiples ubicaciones.</p>
-          <ul class="text-sm list-disc list-inside text-gray-200 space-y-1">
-            <li>Todo lo anterior</li>
-            <li>Panel de edición asistido por IA</li>
-            <li>Acceso multiusuario</li>
-            <li>Multidioma</li>
-            <li>Historial de cambios</li>
-            <li>Notas, horarios, imágenes avanzadas</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+                <!-- Básico -->
+                <div class="bg-[#111] border border-yellow-500 rounded-lg p-5">
+                    <h3 class="text-lg font-bold text-yellow-300 mb-2">Básico — 12€/mes</h3>
+                    <p class="italic text-sm text-gray-400 mb-4">Ideal para negocios que solo necesitan una carta simple
+                        y profesional.</p>
+                    <ul class="text-sm list-disc list-inside text-gray-200 space-y-1">
+                        <li>1 carta digital personalizada</li>
+                        <li>Subdominio tipo <code>tucarta.app/nombre</code></li>
+                        <li>Diseño visual a elegir (modelo 1 a 8)</li>
+                        <li>QR físico si estás en zona local</li>
+                        <li>1 cambio manual gratuito al mes</li>
+                        <li>Soporte por WhatsApp o correo</li>
+                    </ul>
+                </div>
 
-    <section>
-      <h2 class="text-xl font-semibold text-center text-yellow-400 mb-8">Servicios adicionales</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-[#111] border border-yellow-500 rounded-lg p-4">
-          <h3 class="font-bold text-yellow-300 mb-1">Cambios manuales adicionales</h3>
-          <p class="text-sm text-gray-300">+3€/mes por gestión manual adicional.</p>
-        </div>
-        <div class="bg-[#111] border border-yellow-500 rounded-lg p-4">
-          <h3 class="font-bold text-yellow-300 mb-1">Logo en la carta</h3>
-          <p class="text-sm text-gray-300">Gratis si lo suben, o 2€ si lo hacemos nosotros.</p>
-        </div>
-        <div class="bg-[#111] border border-yellow-500 rounded-lg p-4">
-          <h3 class="font-bold text-yellow-300 mb-1">Colores y tipografías</h3>
-          <p class="text-sm text-gray-300">Incluido en Profesional o 5€/modificación puntual.</p>
-        </div>
-        <div class="bg-[#111] border border-yellow-500 rounded-lg p-4">
-          <h3 class="font-bold text-yellow-300 mb-1">Subida de fotos</h3>
-          <p class="text-sm text-gray-300">Pack de 10 por 15€</p>
-        </div>
-        <div class="bg-[#111] border border-yellow-500 rounded-lg p-4">
-          <h3 class="font-bold text-yellow-300 mb-1">QR físicos impresos</h3>
-          <p class="text-sm text-gray-300">Precio según número de QRs plastificados , incluye envío local.</p>
-        </div>
-        <div class="bg-[#111] border border-yellow-500 rounded-lg p-4">
-          <h3 class="font-bold text-yellow-300 mb-1">Carta adicional</h3>
-          <p class="text-sm text-gray-300">+5€/mes</p>
-        </div>
-      </div>
-    </section>
+                <!-- Profesional -->
+                <div class="bg-[#111] border border-yellow-500 rounded-lg p-5">
+                    <h3 class="text-lg font-bold text-yellow-300 mb-2">Profesional — 25€/mes</h3>
+                    <p class="italic text-sm text-gray-400 mb-4">Para quienes quieren destacar visualmente y tener más
+                        libertad.</p>
+                    <ul class="text-sm list-disc list-inside text-gray-200 space-y-1">
+                        <li>Todo lo del Plan Básico</li>
+                        <li>Cambios ilimitados (manual o WhatsApp)</li>
+                        <li>Logo visible y portada</li>
+                        <li>Personalización de colores, fuentes y estilos</li>
+                        <li>Varias cartas (comida, bebida...)</li>
+                        <li>Estadísticas básicas de visitas</li>
+                    </ul>
+                </div>
 
-    <section>
-      <h2 class="text-xl font-semibold text-center text-yellow-400 mb-6">Próximas funcionalidades</h2>
-      <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
-        <li>🧠 Edición con IA mediante instrucciones escritas</li>
-        <li>✏️ Panel editable sin IA (modo manual)</li>
-        <li>🈳 Traducción automática de cartas (multidioma)</li>
-        <li>🔒 QR con clave opcional para restringir acceso</li>
-        <li>🛎️ Integración con reservas o pedidos (a futuro)</li>
-        <li>💳 Pasarela de pago para pedidos en carta</li>
-      </ul>
-    </section>
+                <!-- Avanzado -->
+                <div class="bg-[#111] border border-yellow-500 rounded-lg p-5 relative opacity-50">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-yellow-300 rounded-lg z-10">
+                        <span class="text-lg font-bold">Próximamente</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-yellow-300 mb-2">Avanzado — 40€/mes</h3>
+                    <p class="italic text-sm text-gray-400 mb-4">Para locales con necesidades avanzadas o múltiples
+                        ubicaciones.</p>
+                    <ul class="text-sm list-disc list-inside text-gray-200 space-y-1">
+                        <li>Todo lo anterior</li>
+                        <li>Panel de edición asistido por IA</li>
+                        <li>Acceso multiusuario</li>
+                        <li>Multidioma</li>
+                        <li>Historial de cambios</li>
+                        <li>Notas, horarios, imágenes avanzadas</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-    <section id="contacto" class="text-center pt-12 border-t border-slate-700 mt-12">
-      <h2 class="text-xl font-semibold text-yellow-400 mb-4">¿Interesado?</h2>
-      <p class="text-gray-400 mb-2">Empieza tu prueba gratuita o pregúntanos lo que necesites.</p>
-      <p class="mb-1">WhatsApp: <strong class="text-yellow-400">722 85 32 02</strong></p>
-      <p>Email: <strong class="text-yellow-400">menuxio.app@gmail.com</strong></p>
-    </section>
-  </main>
+        <section>
+            <h2 class="text-xl font-semibold text-center text-yellow-400 mb-8">Servicios adicionales</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-[#111] border border-yellow-500 rounded-lg p-4">
+                    <h3 class="font-bold text-yellow-300 mb-1">Cambios manuales adicionales</h3>
+                    <p class="text-sm text-gray-300">+3€/mes por gestión manual adicional.</p>
+                </div>
+                <div class="bg-[#111] border border-yellow-500 rounded-lg p-4">
+                    <h3 class="font-bold text-yellow-300 mb-1">Logo en la carta</h3>
+                    <p class="text-sm text-gray-300">Gratis si lo suben, o 2€ si lo hacemos nosotros.</p>
+                </div>
+                <div class="bg-[#111] border border-yellow-500 rounded-lg p-4">
+                    <h3 class="font-bold text-yellow-300 mb-1">Colores y tipografías</h3>
+                    <p class="text-sm text-gray-300">Incluido en Profesional o 5€/modificación puntual.</p>
+                </div>
+                <div class="bg-[#111] border border-yellow-500 rounded-lg p-4">
+                    <h3 class="font-bold text-yellow-300 mb-1">Subida de fotos</h3>
+                    <p class="text-sm text-gray-300">Pack de 10 por 15€</p>
+                </div>
+                <div class="bg-[#111] border border-yellow-500 rounded-lg p-4">
+                    <h3 class="font-bold text-yellow-300 mb-1">QR físicos impresos</h3>
+                    <p class="text-sm text-gray-300">Precio según número de QRs plastificados , incluye envío local.</p>
+                </div>
+                <div class="bg-[#111] border border-yellow-500 rounded-lg p-4">
+                    <h3 class="font-bold text-yellow-300 mb-1">Carta adicional</h3>
+                    <p class="text-sm text-gray-300">+5€/mes</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-semibold text-center text-yellow-400 mb-6">Próximas funcionalidades</h2>
+            <ul class="text-sm text-gray-300 space-y-2 list-disc list-inside">
+                <li>🧠 Edición con IA mediante instrucciones escritas</li>
+                <li>✏️ Panel editable sin IA (modo manual)</li>
+                <li>🈳 Traducción automática de cartas (multidioma)</li>
+                <li>🔒 QR con clave opcional para restringir acceso</li>
+                <li>🛎️ Integración con reservas o pedidos (a futuro)</li>
+                <li>💳 Pasarela de pago para pedidos en carta</li>
+            </ul>
+        </section>
+
+        <section id="contacto" class="text-center pt-12 border-t border-slate-700 mt-12">
+            <h2 class="text-xl font-semibold text-yellow-400 mb-4">¿Interesado?</h2>
+            <p class="text-gray-400 mb-2">Empieza tu prueba gratuita o pregúntanos lo que necesites.</p>
+            <p class="mb-1">WhatsApp: <strong class="text-yellow-400">722 85 32 02</strong></p>
+            <p>Email: <strong class="text-yellow-400">menuxio.app@gmail.com</strong></p>
+        </section>
+    </main>
 </body>
+
 </html>
